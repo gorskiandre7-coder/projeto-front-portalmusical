@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Música | André Fogaça Gorski</title>
+    <link rel="stylesheet" href="style.css">
+    <!--CSS Interno-->
+    <style>
+        /*tag de detaque no topo*/
+        .andre_badge_novidade {
+            background-color: #1db954;
+            color: #000000;
+            padding:3px 8px;
+            font-size: 11px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+
+        /* 2. Subtítulo descritivo do cabeçalho */
+        .andre_subtitulo_header {
+            font-size: 16px;
+            color: #b3b3b3;
+            margin-top: 5px;
+        }
+
+        /* 3. Marcador de aviso ou nota técnica */
+        .andre_nota_rodape {
+            font-size: 12px;
+            color: #777777;
+            font-style: italic;
+        }
+
+        /* 4. Caixa de dica de preenchimento do formulário */
+        .andre_dica_campo {
+            font-size: 11px;
+            color: #1db954;
+            display: block;
+            margin-top: 2px;
+        }
+
+       /* 5. Destaque de texto em negrito secundário */ 
+       .andre_texto_destaque {
+        color: #ffffff;
+        border-left: 2px solid #1db954;
+        padding-left: 6px;
+       }
+    </style>
+</head>
+<body>
+    <!--Container geral-->
+    <div id="andre_wrap">
+        <header id="topo">
+            <span class="andre_badge_novidade">EDIÇÃO ESPECIAL 2026</span>
+            <h1>Portal de Música</h1>
+            <p class="andre_subtitulo_header">Exploração musical, lançamentos de peso e discografias essenciais.</p>
+        </header>
+        <!--NAV unica com lista nao ordenada e ancora para as 10 seções-->
+        <nav id="andre_menu_principal">
+            <ulL>
+                <li><a href="#destaque">1. Destaque</a></li>
+                <li><a href="#top-albuns">2. Top Álbuns</a></li>
+                <li><a href="#artistas">3. Artista</a></li>
+                <li><a href="#dashboard">4. Player</a></li>
+                <li><a href="#tabela-lancamentos">5. Paradas</a></li>
+                <li><a href="#carrossel-secao">6. Carrossel</a></li>
+                <li><a href="#fila-reproducao">7. Fila</a></li>
+                <li><a href="#enviar-demo">8. Enviar Demo</a></li>
+                <li><a href="#generos">9. Gêneros</a></li>
+                <li><a href="#cadastro-vip">10. Cadastro VIP</a></li>
+            </ulL>
+        </nav>
+        <main>
+            <!-- SECÇÃO 1: BANNER PRINCIPAL / LANÇAMENTO EM DESTAQUE -->
+             <section id="destaque" class="andre_secao">
+                <h2>1. Lançamento da Semana em Destaque</h2>
+
+                <p style="color:#1db954; font-weight: bold; margin-bottom: 15px;">Destaque Editorial SoundWave • Curadoria Especial</p>
+
+                <div class="andre_banner_container">
+                    <img src="img/kanye - album.jpg" alt="Capa do álbum My Beautiful Dark Twisted Fantasy - Kanye West">
+                    <div class="andre_banner_texto">
+                        <h3>My Beautiful Dark Twisted Fantasy - Kanye West</h3>
+                        <p>Lançado em 2010, o álbum consolidou-se como um marco da produção sonora moderna,
+                        misturando hip-hop grandioso, rock progressivo e arranjos orquestrais complexos.
+                    <p>Faixas de maior sucesso: <em>Runaway</em>, <em>Power</em> e <em>Devil in a New Dress</em>.</p>
+                    </div>
+                </div>
+                <!-- Link obrigatório de retorno ao topo -->
+                <a href="#topo" class="andre_link_topo">↑ Voltar ao Topo</a>
+             </section>
+
+             <!-- SECÇÃO 2: TOP ÁLBUNS COM CSS GRID A [repeat(4, 1fr)] -->
+              <section id="top-albuns" class="andre_secao">
+                <h2>2. Discos Essenciais da Critíca</h2>
+                <p>Seleção com 4 obras seminais distribuídas em colunas de mesma proporção (Grid A).</p>
+
+                <!-- Container associado ao Grid A no CSS: repeat(4, 1fr)-->
+                 <div id="andre_grid_albuns">
+                    <div class="andre_card">
+                        <img src="img/asap - album.jpg" alt="Capa LIVE.LOVE.A$AP - A$AP Rocky">
+                        <h3>LIVE.LOVE.A$AP</h3>
+                        <p class="andre_texto_destque">A$AP Rocky (2011)</p>
+                        <p>A estreia que redefiniu a estética do cloud rap nova-iorquino</p>
+                    </div>
+
+                    <div class="andre_card">
+                    <img src="img/orange - album.jpg" alt="Capa channel ORANGE - Frank Ocean">
+                    <h3>channel ORANGE</h3>
+                    <p class="andre_texto_destaque">Frank Ocean (2012)</p>
+                    <p>Arranjos minimalistas focados em guitarra, sintetizadores quentes e voz crua.</p>
+                 </div>
+
+                 <div class="andre_card">
+                    <img src="img/blond - album.jpg" alt="Capa Blond - Frank Ocean">
+                    <h3>Blond</h3>
+                    <p class="andre_texto_destque">Frank Ocean (2016)</p>
+                    <p>Arranjos minimalistas focados em guitarra, sintetizadores quentes e voz crua.</p>
+                 </div>
+
+                 <div class="andre_card">
+                    <img src="img/IGOR - album.jpg" alt="Capa IGOR - Tyler, The Creator">
+                    <h3>IGOR</h3>
+                    <p class="andre_texto_destaque">Tyler, The Creator (2019)</p>
+                    <p>Narrativa conceitual de término com produção caleidoscópica e sintetizadores funk.</p>
+                 </div>
+                 </div>
+                 
+                 <a href="#topo" class="andre_link_topo">↑ Voltar ao Topo</a>
+              </section>
+
+              <!-- SECÇÃO 3: ARTISTA EM DESTAQUE COM CSS GRID B [1fr 2fr 1fr]-->
+               <section id="artistas" class="andre_secao">
+                    <h2>3. Perfil do Artista: Radiohead</h2>
+                    <p>Estrutura visual organizada com três colunas de proporções variadas: 1fr 2fr 1fr (Grid B).</p>
+
+                    <!-- Container associado ao Grid B no CSS: 1fr 2fr 1fr -->
+                    <div class="andre_grid_artista">
+                        <!-- Coluna 1 (1fr): Biografia e Contexto-->
+                        <div class="andre_coluna_lateral">
+                            <h3>Trajetória</h3>
+                            <p>
+                                Formada em Oxfordshire, a banda britânica desafiou as convenções da música alternativa ao
+                                mesclar guitarras com música eletrónica avançada.
+                            </p>
+                            <p><strong>Integrantes principais:</strong> Thom Yorke, Jonny Greenwood e Colin Greenwood.</p>
+                        </div>
+
+                        <!-- Coluna 2 (2fr): Imagem Principal e Destaque do Álbum In Rainbows -->
+                        <div class="andre_coluna_central">
+                            <img src="img/radiohead - album.jpg" alt="Arte da capa In Rainbows - Radiohead">
+                            <h3>In Rainbows (2007)</h3>
+                            <p>
+                                Lançamento lendário com o modelo "pague quanto quiser", combinando guitarras quentes e ritmos complexos.
+                            </p>
+                        </div>
+
+                        <!-- Coluna 3 (1fr): Estatísticas e Dados Técnicos-->
+                        <div class="andre_coluna_lateral">
+                            <h3>Dados Técnicos</h3>
+                            <ul>
+                                <li><strong>Origem:</strong> Inglaterra</li>
+                                <li><strong>Duração:</strong> 42 min 39 s</li>
+                                <li><strong>Faixa Chave:</strong> Weird Fishes</li>
+                                <li><strong>Prémio:</strong> Grammy de Melhor Álbum Alternativo</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <a href="#topo" class="andre_link_topo">↑ Voltar ao Topo</a>
+               </section>
+
+               <!-- SECÇÃO 4: DASHBOARD DO PLAYER COM CSS GRID C (grid-template-areas) -->
+                <section id="dashboard" class="andre_secao">
+                    <h2>4. Painel de Reprodução em Tempo Real</h2>
+                    <p>Layout estruturado com CSS Grid C através de áreas nomeadas (grid-template-areas).</p>
+
+                        <!-- Contentor associado ao Grid C no style.css[cite: 2] -->
+                        <div id="andre_grid_dashboard">
+                            <h3>A Reproduzir Agora: Nikes - Frank Ocean</h3>
+                            <p>Álbum: <em>Blonde</em> (2016) | Gênero: Neo-Soul / R&B Contemporâneo</p>
+                            <p>Controles de reprodução: <strong>[ ◀ Anterior ] [ ❚❚ Pausar ] [ Próximo ▶ ]</strong></p>
+        
+
+                            <!-- Área 2: Análise da faixa usando a tag obrigatória ARTICLE (grid-area: letra) -->
+                            <article class="andre_area_letra">
+                                <h3>Análise e Visão da Faixa</h3>
+                                <p>
+                                A música de abertura explora temas de luto, efemeridade material e relacionamentos superficiais,
+                                marcada pelo uso de vocais com pitch alterado e textura instrumental etérea.
+                                </p>
+                                <p class="andre_texto_destaque">
+                                    These bitches want Nikes / They looking for a check / Tell 'em it ain't likely
+                                </p>
+                                <p><em>(As letras completas licenciadas podem ser consultadas em plataformas de busca).</em></p>
+                            </article>
+
+                            <!-- Área 3: Informações complementares usando a tag obrigatória ASIDE (grid-area: informacao) -->
+                            <aside class="andre_area_info">
+                                <h3>Ficha Faixa</h3>
+                                <ul>
+                                    <li><strong>Duração:</strong> 5 min 14 s</li>
+                                    <li><strong>BPM:</strong> 61 bpm</li>
+                                    <li><strong>Produção:</strong> Frank Ocean, Malay, Om'Mas Keith</li>
+                                    <li><strong>Lançamento:</strong> 20 de Agosto de 2016</li>
+                                </ul>
+                            </aside>
+
+                        </div>
+
+                        <a href="#topo" class="andre_link_topo">↑ Voltar ao Topo</a>
+                </section>
+
+                <!-- SECÇÃO 5: TABELA SEMÂNTICA 10x6 DE PARADAS MUSICAIS -->
+                 <section id="tabela-lancamentos" class="andre_secao">
+                    <h2>5. Top 10 Faixas Mais Transmitidas</h2>
+                    <p>Tabela semântica completa de 10 linhas de conteúdo por 6 colunas (10x6).</p>
+
+                    <div class="andre_tabela_container">
+                        <table>
+                            <!-- Cabeçalho da tabela com CSS inline (uso 2 de 5 permitidos) -->
+                            <thead style="background-color: #282828;">
+                                <tr>
+                                    <th>Posição</th>
+                                    <th>Faixa</th>
+                                    <th>Artista</th>
+                                    <th>Álbum</th>
+                                    <th>Duração</th>
+                                    <th>Streams (Milhões)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#1</td>
+                                    <td>Peso</td>
+                                    <td>A$AP Rocky</td>
+                                    <td>LIVE.LOVE.A$AP</td>
+                                    <td>2:48</td>
+                                    <td>480</td>
+                                </tr>
+                                <tr>
+                                    <td>#2</td>
+                                    <td>Thinkin Bout You</td>
+                                    <td>Frank Ocean</td>
+                                    <td>channel ORANGE</td>
+                                    <td>3:20</td>
+                                    <td>1.150</td>
+                                </tr>
+                                <tr>
+                                    <td>#3</td>
+                                    <td>Pyramids</td>
+                                    <td>Frank Ocean</td>
+                                    <td>channel ORANGE</td>
+                                    <td>9:52</td>
+                                    <td>310</td>
+                                </tr>
+                                <tr>
+                                    <td>#4</td>
+                                    <td>Nights</td>
+                                    <td>Frank Ocean</td>
+                                    <td>Blonde</td>
+                                    <td>5:07</td>
+                                    <td>920</td>
+                                </tr>
+                                <tr>
+                                    <td>#5</td>
+                                    <td>Pink + White</td>
+                                    <td>Frank Ocean</td>
+                                    <td>Blonde</td>
+                                    <td>3:04</td>
+                                    <td>1.420</td>
+                                </tr>
+                                <tr>
+                                    <td>#6</td>
+                                    <td>EARFQUAKE</td>
+                                    <td>Tyler, The Creator</td>
+                                    <td>IGOR</td>
+                                    <td>3:10</td>
+                                    <td>1.380</td>
+                                </tr>
+                                <tr>
+                                    <td>#7</td>
+                                    <td>NEW MAGIC WAND</td>
+                                    <td>Tyler, The Creator</td>
+                                    <td>IGOR</td>
+                                    <td>3:15</td>
+                                    <td>690</td>
+                                </tr>
+                                <tr>
+                                    <td>#8</td>
+                                    <td>Reckoner</td>
+                                    <td>Radiohead</td>
+                                    <td>In Rainbows</td>
+                                    <td>4:50</td>
+                                    <td>240</td>
+                                </tr>
+                                <tr>
+                                    <td>#9</td>
+                                    <td>Weird Fishes / Arpeggi</td>
+                                    <td>Radiohead</td>
+                                    <td>In Rainbows</td>
+                                    <td>5:18</td>
+                                    <td>390</td>
+                                </tr>
+                                <tr>
+                                    <td>#10</td>
+                                    <td>Runaway</td>
+                                    <td>Kanye West</td>
+                                    <td>MBDTF</td>
+                                    <td>9:08</td>
+                                    <td>850</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="4">Total Acumulado das 10 Faixas</td>
+                                    <td>50:32</td>
+                                    <td>8.240 M</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                    <a href="#topo" class="andre_link_topo">↑ Voltar ao Topo</a>
+                 </section>
+
+                <!-- SECÇÃO 6: CARROSSEL DE DISCOS HISTÓRICOS (Opção D - JS) -->
+                 <section id="carrossel-secao" class="andre-secao">
+                    <h2>6. Galeria Histórica de Encartes</h2>
+                    <p>Carrossel interativo com quatro capas base, contador e inclusão dinâmica de novas imagens.</p>
+
+                        <!-- Moldura principal de visualização da imagem -->
+                        <div class="andre_carrossel_moldura">
+                            <img id="andre_carrossel_img" src="img/blond - album.jpg" alt="Capa em exibição no carrossel">
+
+                            <p id="andre_carrossel_legenda" style="margin-top: 10px; font-weight: bold;">Frank Ocean - Blond (2016)</p>
+
+                            <!-- Contador de posição atual exigido no trabalho[cite: 3] -->
+                            <p id="andre_carrossel_contador" class="andre_nota_rodape">Item 1 de 4</p>
+
+                            <!--Botões de navegacao-->
+                            <div class="andre_carrossel_controles">
+                                <button type="button" id="andre_btn_ant" class="andre_btn">◀ Anterior</button>
+                                <button type="button" id="andre_btn_prox" class="andre_btn">Próximo ▶</button>
+                            </div>
+                        </div>
+
+                     <!-- Área com inputs para o utilizador adicionar uma nova capa à sequência -->
+                        <div class="andre_carrossel_novo_item" style="background-color: #242424; padding: 15px; border-radius: 6px; margin-top: 15px;">
+                            <h3>Adicionar Novo Disco ao Carrossel</h3>
+
+                            <div class="andre_campo_grupo">
+                                <label for="andre_nova_legenda_carrossel">Legenda do disco (Artista e Álbum):</label>
+                                <input type="text" id="andre_nova_legenda_carrossel" placeholder="Ex: Tyler, The Creator — Flower Boy" class="andre_input_texto">
+                            </div>
+
+                            <button type="button" id="andre_btn_add_carrossel" class="andre_btn">+ Adicionar ao Carrossel</button>
+                        </div>
+
+                    <a href="#topo" class="andre_link_topo">↑ Voltar ao Topo</a>
+                 </section>
+
+
+
+                 <!-- SEÇÃO 7: FILA DE REPRODUÇÃO DINÂMICA COM FILTROS (Opção E)[cite: 1, 3] -->
+                <section id="fila-reproducao" class="andre_secao">
+                    <h2>7. Minha Fila de Reprodução</h2>
+                    <p>Adicione faixas, alterne status (ouvida/na fila), edite os nomes e filtre a exibição[cite: 3].</p>
+
+                    <!-- Campo de entrada e botões principais[cite: 3] -->
+                    <div class="andre_campo_fila_container">
+                        <input type="text" id="andre_input_musica" placeholder="Digite o nome da música e artista..." class="andre_input_texto">
+                        <button type="button" id="andre_btn_add_fila" class="andre_btn">+ Inserir na Fila</button>
+                        <button type="button" id="andre_btn_limpar_fila" class="andre_btn andre_btn_perigo">Limpar Fila</button>
+                    </div>
+
+                    <!-- Barra de filtros e contador[cite: 3] -->
+                    <div class="andre_filtros_container">
+                        <span>Filtrar por:</span>
+                        <button type="button" id="andre_filtro_todas" class="andre_btn_filtro ativo">Todas</button>
+                        <button type="button" id="andre_filtro_pendentes" class="andre_btn_filtro">Na Fila</button>
+                        <button type="button" id="andre_filtro_ouvidas" class="andre_btn_filtro">Ouvidas</button>
+                        <span id="andre_contador_fila" class="andre_contador_texto">Total: 3 faixas</span>
+                    </div>
+
+                    <!-- Lista dinâmica manipulada pelo DOM[cite: 2, 3] -->
+                    <ul id="andre_lista_fila" class="andre_lista_fila">
+                        <li class="andre_item_fila ouvida" data-status="ouvida">
+                            <span class="andre_texto_musica">Nikes — Frank Ocean</span>
+                            <div class="andre_acoes_item">
+                                <button type="button" class="andre_btn_acao andre_btn_status">Marcar Pendente</button>
+                                <button type="button" class="andre_btn_acao andre_btn_editar">Editar</button>
+                                <button type="button" class="andre_btn_acao andre_btn_remover">✕</button>
+                            </div>
+                        </li>
+                        <li class="andre_item_fila" data-status="pendente">
+                            <span class="andre_texto_musica">Bodysnatchers — Radiohead</span>
+                            <div class="andre_acoes_item">
+                                <button type="button" class="andre_btn_acao andre_btn_status">Marcar Ouvida</button>
+                                <button type="button" class="andre_btn_acao andre_btn_editar">Editar</button>
+                                <button type="button" class="andre_btn_acao andre_btn_remover">✕</button>
+                            </div>
+                        </li>
+                        <li class="andre_item_fila" data-status="pendente">
+                            <span class="andre_texto_musica">Palace — A$AP Rocky</span>
+                            <div class="andre_acoes_item">
+                                <button type="button" class="andre_btn_acao andre_btn_status">Marcar Ouvida</button>
+                                <button type="button" class="andre_btn_acao andre_btn_editar">Editar</button>
+                                <button type="button" class="andre_btn_acao andre_btn_remover">✕</button>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!-- Link de retorno ao topo obrigatório -->
+                    <a href="#topo" class="andre_link_topo">↑ Voltar ao Topo</a>
+                </section>
+
+
+                <!-- SECÇÃO 8: ENVIO DE DEMO / JANELA MODAL (Opção C - JS) -->
+                <section id="enviar-demo" class-secao="andre_secao">
+                    <h2>8. Envio de Demo Independente</h2>
+                    <p>Cadastre uma faixa inédita e vizualize a prévia da capa num cartão interativo em janela modal</p>
+
+                    <!-- Painel de entrada dos dados da música -->
+                     <div style="background-color: #242424; padding: 20px; border-radius: 6px; margin-top: 15px">
+                        <div class="andre_campo_grupo">
+                            <label for="andre_demo_titulo">Título da Faixa:</label>
+                            <input type="text" id="andre_demo_titulo" class="andre_input_texto" placeholder="Ex: Lost In The Sound">
+                        </div>
+
+                        <div class="andre_campo_grupo">
+                            <label for="andre_demo_artista">Compositor / Artista:</label>
+                            <input type="text" id="andre_demo_artista" class="andre_input_texto" placeholder="Ex: André Fogaça">
+                        </div>
+
+                        <div class="andre_campo_grupo">
+                            <label for="andre_demo_descricao">Breve Conceito / Descrição Sonora:</label>
+                            <textarea id="andre_demo_descricao" class="andre_textarea" placeholder="Descreva os instrumentos e a proposta conceitual da faixa..."></textarea>
+                        </div>
+
+                        <div class="andre_campo_grupo">
+                            <label for="andre_demo_arquivo">Ficheiro de Imagem da Capa:</label>
+                            <input type="file" id="andre_demo_arquivo" accept="image/*" class="andre_input_texto">
+                        </div>
+
+                        <button type="button" id="andre_btn_abrir_modal" class="andre_btn">Visualizar Cartão no Modal</button>
+                     </div>
+
+                     <!-- Estrutura da Janela Modal (fundo escurecido e caixa interna) -->
+                      <div id="andre_modal_container" class="andre_modal_fundo">
+                        <div class="andre_caixa_modal">
+                            <h3 id="andre_modal_titulo_exibicao">Título da Demo</h3>
+                            <p id="andre_modal_artista_exibicao" class="andre_texto_destaque">Artista</p>
+
+                            <!-- A imagem inserida pelo utilizador será renderizada dinamicamente aqui -->
+                             <img id="andre_modal_img_exibicao" src="" alt="Prévia da Capa Carregada" style="max-height: 200px; margin: 15px auto; display: none;">
+
+                             <p id="andre_modal_desc_exibicao" style="margin: 10px 0; font-size: 14px;"></p>
+
+                             <button type="button" id="andre_btn_fechar_modal" class="andre_btn">Fechar Modal</button>
+                        </div>
+                      </div>
+
+                      <a href="#topo" class="andre_link_topo">↑ Voltar ao Topo</a>
+                </section> 
+
+
+                <!-- SECÇÃO 9: GÉNEROS E VERTENTES MUSICAIS -->
+                 <section id="generos" class="andre_secao">
+                    <h2>9. Gêneros em Alta e Curadoria</h2>
+                    <p>Panorama sonoro com artigos dedicados a cada vertente estilística presente no SoundWave.</p>
+
+                    <div class="andre_grid_generos">
+                        <!-- Article 1: Hip-Hop Experimental -->
+                         <article class="andre_card_genero">
+                            <h3>Hip-Hop Experimental & Cloud Rap</h3>
+                            <p>Produções caracterizadas por reverberações espaciais, linhas de baixo 808 encorpadas e métricas desaceleradas.</p>
+                            <p class="andre_texto_destaque">Principais expoentes: A$AP Rocky, Playboi Carti, Clams Casino.</p>
+                         </article>
+
+                         <!-- Artigo 2: Neo-Soul & R&B -->
+                        <article class="andre_card_genero">
+                            <h3>Neo-Soul & R&B Alternativo</h3>
+                            <p>Composições intimistas estruturadas sobre acordes de pianos elétricos, sintetizadores analógicos e linhas vocais expressivas.</p>
+                            <p class="andre_texto_destaque">Principais expoentes: Frank Ocean, SZA, Steve Lacy.</p>
+                        </article>
+
+                        <!-- Artigo 3: Art Rock -->
+                        <article class="andre_card_genero">
+                            <h3>Art Rock & Música Eletrónica</h3>
+                            <p>Construção sonora que cruza arranjos de cordas tradicionais com experimentações rítmicas e manipulação digital.</p>
+                            <p class="andre_texto_destaque">Principais expoentes: Radiohead, The Smile, Thom Yorke.</p>
+                        </article>
+                    </div>
+
+                    <a href="#topo" class="andre_link_topo">↑ Voltar ao Topo</a>
+                 </section>
+
+
+                 <!-- SECÇÃO 10: FORMULÁRIO COMPLETO COM MAIS DE 12 CAMPOS (Validação JS) -->
+                    <section id="cadastro-vip" class="andre_secao">
+                        <h2>10. Inscrição de Membro SoundWave VIP</h2>
+                        <p>Formulário semântico estruturado para acesso antecipado a ingressos, audições e novidades da plataforma.</p>
+
+                        <!-- Formulário com novalidate para permitir a validação exclusiva em JavaScript -->
+                        <form id="andre_form_cadastro" novalidate>
+
+                            <!-- Fieldset 1: Identificação Pessoal -->
+                            <fieldset>
+                                <legend>Identificação Pessoal</legend>
+
+                                <!-- Campo 1: Nome Completo (text) -->
+                                <div class="andre_campo_grupo">
+                                    <label for="andre_nome">Nome Completo:</label>
+                                    <input type="text" id="andre_nome" name="nome" placeholder="Digite o seu nome completo" class="andre_input_texto">
+                                    <span class="andre_dica_campo">Mínimo de 3 caracteres.</span>
+                                </div>
+
+                                <!-- Campo 2: Endereço de E-mail (email) -->
+                                <div class="andre_campo_grupo">
+                                    <label for="andre_email">Endereço de E-mail:</label>
+                                    <input type="email" id="andre_email" name="email" placeholder="exemplo@dominio.com" class="andre_input_texto">
+                                </div>
+
+                                <!-- Campo 3: Senha de Acesso (password) -->
+                                <div class="andre_campo_grupo">
+                                    <label for="andre_senha">Senha de Acesso:</label>
+                                    <input type="password" id="andre_senha" name="senha" placeholder="Mínimo de 6 caracteres" class="andre_input_texto">
+                                </div>
+
+                                <!-- Campo 4: Confirmação de Senha (password) -->
+                                <div class="andre_campo_grupo">
+                                    <label for="andre_confirma_senha">Confirmar Senha:</label>
+                                    <input type="password" id="andre_confirma_senha" name="confirma_senha" placeholder="Repita a senha" class="andre_input_texto">
+                                </div>
+
+                                <!-- Campo 5: Idade (number) -->
+                                <div class="andre_campo_grupo">
+                                    <label for="andre_idade">Idade:</label>
+                                    <input type="number" id="andre_idade" name="idade" placeholder="Ex: 20" class="andre_input_texto" min="12" max="120">
+                                </div>
+
+                                <!-- Campo 6: Data de Nascimento (date) -->
+                                <div class="andre_campo_grupo">
+                                    <label for="andre_nascimento">Data de Nascimento:</label>
+                                    <input type="date" id="andre_nascimento" name="nascimento" class="andre_input_texto">
+                                </div>
+                            </fieldset>
+
+                            <!-- Fieldset 2: Preferências Musicais -->
+                            <fieldset style="margin-top: 15px;">
+                                <legend>Preferências Musicais e Perfil</legend>
+
+                                <!-- Campo 7: Género Musical Favorito (select) -->
+                                <div class="andre_campo_grupo">
+                                    <label for="andre_genero_fav">Género Principal Favorito:</label>
+                                    <select id="andre_genero_fav" name="genero_fav" class="andre_select">
+                                        <option value="">-- Selecione uma opção --</option>
+                                        <option value="hiphop">Hip-Hop / Rap</option>
+                                        <option value="rnb">R&B / Neo-Soul</option>
+                                        <option value="rock">Rock / Alternativo</option>
+                                        <option value="eletronica">Música Eletrónica</option>
+                                    </select>
+                                </div>
+
+                                <!-- Campo 8: Artista Mais Ouvido (text) -->
+                                <div class="andre_campo_grupo">
+                                    <label for="andre_artista_fav">Artista ou Banda Mais Ouvida:</label>
+                                    <input type="text" id="andre_artista_fav" name="artista_fav" placeholder="Ex: Frank Ocean" class="andre_input_texto">
+                                </div>
+
+                                <!-- Campo 9: Média de Horas Diárias (number) -->
+                                <div class="andre_campo_grupo">
+                                    <label for="andre_horas_musica">Horas Diárias Ouvindo Música:</label>
+                                    <input type="number" id="andre_horas_musica" name="horas_musica" placeholder="Ex: 4" class="andre_input_texto" min="1" max="24">
+                                </div>
+
+                                <!-- Campo 10: Modalidade de Adesão (radio) -->
+                                <div class="andre_campo_grupo">
+                                    <label>Tipo de Adesão Pretendida:</label>
+                                    <div class="andre_opcoes_inline">
+                                        <input type="radio" id="andre_plano_gratis" name="plano" value="gratis">
+                                        <label for="andre_plano_gratis">Ouvinte Padrão (Gratuito)</label>
+
+                                        <input type="radio" id="andre_plano_vip" name="plano" value="vip">
+                                        <label for="andre_plano_vip">Membro VIP Anual</label>
+                                    </div>
+                                </div>
+
+                                <!-- Campo 11: Link de Perfil Social (url) -->
+                                <div class="andre_campo_grupo">
+                                    <label for="andre_perfil_url">Link de Perfil Musical (Spotify / Last.fm):</label>
+                                    <input type="url" id="andre_perfil_url" name="perfil_url" placeholder="https://open.spotify.com/user/..." class="andre_input_texto">
+                                </div>
+
+                                <!-- Campo 12: Biografia do Ouvinte (textarea) -->
+                                <div class="andre_campo_grupo">
+                                    <label for="andre_bio_ouvinte">Biografia Musical e Comentários:</label>
+                                    <textarea id="andre_bio_ouvinte" name="bio_ouvinte" placeholder="Conte resumidamente a sua relação com a música..." class="andre_textarea"></textarea>
+                                </div>
+
+                                <!-- Campo 13 (Controlo Adicional): Termos de Uso (checkbox) -->
+                                <div class="andre_campo_grupo">
+                                    <div class="andre_opcoes_inline">
+                                        <input type="checkbox" id="andre_termos" name="termos" value="aceito">
+                                        <label for="andre_termos">Concordo com os termos de adesão da plataforma SoundWave.</label>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <!-- Botões de Ação do Formulário -->
+                            <button type="submit" id="andre_btn_enviar_cadastro" class="andre_btn">Submeter Inscrição</button>
+                            <button type="reset" id="andre_btn_limpar_cadastro" class="andre_btn andre_btn_perigo" style="margin-left: 10px;">Limpar Campos</button>
+                        </form>
+
+                        
+                        <a href="#topo" class="andre_link_topo">↑ Voltar ao Topo</a>
+                    </section>
+
+        </main>
+        
+        <footer>
+            <p><strong>SoundWave Portal Musical</strong> – Projeto Integrador Front-End</p>
+            <p>Desenvolvido individualmente por: <strong>André Fogaça Gorski</strong></p>
+            <p class="andre_nota_rodape">Uso de ferramentas de IA como suporte consultivo na compreensão de semântica HTML5, arquitetura CSS Grid e manipulação do DOM.</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
