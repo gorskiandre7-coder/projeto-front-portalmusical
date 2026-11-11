@@ -1,49 +1,30 @@
-/*  1. RESET BÁSICO E VARIÁVEIS (Dark Theme / Spotify Style) */
-:root {
-    --bg-principal: #121212;
-    --bg-superficie: #181818;
-    --bg-card: #242424;
-    --bg-card-hover: #2a2a2a;
-    --verde-destaque: #1db954;
-    --verde-hover: #1ed760;
-    --texto-principal: #ffffff;
-    --texto-secundario: #b3b3b3;
-    --borda-suave: #333333;
-    --fonte-padrao: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-}
-
-* { 
-    margin: 0;
-    padding: 0;
+/* 1. RESET BÁSICO (Cores Diretas) */
+* {
+    margin: 0; 
+    padding: 0; 
     box-sizing: border-box; 
 }
 
-
 html { 
-    scroll-behavior: smooth;
-    font-family: var(--fonte-padrao);
-    background-color: var(--bg-principal);
-    color: var(--texto-principal); 
+    scroll-behavior: smooth; 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+    background-color: #121212; 
+    color: #ffffff; 
 }
 
-
-body {
+body { 
     line-height: 1.6; 
     overflow-x: hidden; 
 }
 
-
-/* CONTROLO GLOBAL DE IMAGENS (Evita as imagens gigantes) */
 img { 
     max-width: 100%; 
     height: auto; 
-    display: block; 
-}
+    display: block; }
 
 
+/* 2. GRID ESTRUTURAL PRINCIPAL */
 
-
-/* 2. GRID ESTRUTURAL PRINCIPAL (1º USO OBRIGATÓRIO CSS GRID) */
 #andre_wrap {
     display: grid;
     min-height: 100vh;
@@ -55,14 +36,13 @@ img {
         "rodape    rodape";
 }
 
-
-
-/* 3. CABEÇALHO E NAVEGAÇÃO */
+/*  3. CABEÇALHO E NAVEGAÇÃO */
 
 #topo { 
     grid-area: cabecalho; 
     background-color: #000000; 
-    padding: 30px 40px; border-bottom: 1px solid var(--borda-suave); 
+    padding: 30px 40px; 
+    border-bottom: 1px solid #333333; 
 }
 
 #topo h1 { 
@@ -76,7 +56,7 @@ img {
     grid-area: navegacao;
     background-color: #050505;
     padding: 30px 20px;
-    border-right: 1px solid var(--borda-suave);
+    border-right: 1px solid #333333;
     position: sticky;
     top: 0;
     height: 100vh;
@@ -90,7 +70,7 @@ img {
 }
 
 #andre_menu_principal a {
-    color: var(--texto-secundario);
+    color: #b3b3b3;
     text-decoration: none;
     font-size: 14px;
     font-weight: 600;
@@ -101,65 +81,59 @@ img {
 }
 
 #andre_menu_principal a:hover { 
-    color: var(--texto-principal);
-    background-color: var(--bg-card);
+    color: #ffffff; 
+    background-color: #242424; 
     transform: translateX(4px); 
-    }
-
-
+}
 
 /* 4. ESTRUTURA GERAL DAS SECÇÕES (<main>) */
-main {
-     grid-area: principal; 
-     padding: 40px 50px; 
-     background: linear-gradient(180deg, #1f1f1f 0%, var(--bg-principal) 400px);
-     display: flex; 
-     flex-direction: column; gap: 60px; 
+
+main { 
+    grid-area: principal; 
+    padding: 40px 50px; 
+    background: linear-gradient(180deg, #1f1f1f 0%, #121212 400px); 
+    display: flex; 
+    flex-direction: column; 
+    gap: 60px; 
 }
 
 .andre_secao { 
-    background-color: var(--bg-superficie); 
-    padding: 35px; border-radius: 8px; 
+    background-color: #181818; 
+    padding: 35px; 
+    border-radius: 8px; 
     border: 1px solid rgba(255,255,255,0.05); 
 }
 
-.andre_secao h2 {
-    font-size: 24px;
-    color: var(--texto-principal);
-    border-bottom: 2px solid var(--verde-destaque);
-    padding-bottom: 8px;
-    display: inline-block;
+.andre_secao h2 { 
+    font-size: 24px; 
+    color: #ffffff; 
+    border-bottom: 2px solid #1db954; 
+    padding-bottom: 8px; 
+    display: inline-block; 
     margin-bottom: 10px;
 }
 
 .andre_link_topo { 
-    display: inline-block;
-    margin-top: 25px;
-    color: var(--texto-secundario); 
+    display: inline-block; 
+    margin-top: 25px; 
+    color: #b3b3b3; 
     text-decoration: none; 
     font-size: 13px; 
     font-weight: bold; 
     transition: color 0.2s; 
 }
 
-.andre_link_topo:hover {
-    color: var(--verde-destaque); 
-}
-
-
-
+.andre_link_topo:hover { color: #1db954; }
 
 /* 5. GRIDS DE CONTEÚDO (Secções 1, 2, 3 e 4) */
-/* SECÇÃO 1: Banner */
 .andre_banner_container {
     display: flex; 
     gap: 30px; 
     align-items: center; 
-    background-color: var(--bg-card); 
+    background-color: #242424; 
     padding: 25px; border-radius: 8px; 
     margin-top: 15px;
 }
-
 .andre_banner_container img { 
     width: 100%; 
     max-width: 280px; 
@@ -172,9 +146,6 @@ main {
     margin-bottom: 10px; 
 }
 
-
-
-/* SECÇÃO 2: Grid A (repeat(4, 1fr)) */
 #andre_grid_albuns {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -183,21 +154,22 @@ main {
 }
 
 .andre_card { 
-    background-color: var(--bg-card);
+    background-color: #242424; 
     padding: 18px; 
     border-radius: 6px; 
-    transition: transform 0.2s ease; 
+    transition: transform 0.2s ease;
 }
 
 .andre_card:hover { 
     transform: translateY(-4px); 
-    background-color: var(--bg-card-hover); 
+    background-color: #2a2a2a; 
 }
 
 .andre_card img { 
     width: 100%; 
     aspect-ratio: 1/1; 
-    object-fit: cover; border-radius: 4px; 
+    object-fit: cover; 
+    border-radius: 4px; 
     margin-bottom: 12px; 
 }
 
@@ -206,18 +178,15 @@ main {
     margin-bottom: 5px; 
 }
 
-
-
-/* SECÇÃO 3: Grid B (1fr 2fr 1fr) */
 .andre_grid_artista {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     gap: 20px;
     margin-top: 25px;
 }
-.andre_coluna_lateral, 
-.andre_coluna_central { 
-    background-color: var(--bg-card); 
+
+.andre_coluna_lateral, .andre_coluna_central { 
+    background-color: #242424; 
     padding: 25px; 
     border-radius: 6px; 
 }
@@ -227,24 +196,18 @@ main {
 }
 
 .andre_coluna_central img { 
-    width: 100%; 
-    max-width: 350px; 
+    width: 100%; max-width: 350px; 
     margin: 0 auto 15px; 
     border-radius: 6px; 
     box-shadow: 0 10px 20px rgba(0,0,0,0.5); 
 }
 
 .andre_coluna_lateral ul { 
-    list-style-position: inside; 
-    margin-top: 10px; 
-    color: var(--texto-secundario); 
+    list-style-position: inside;
+    margin-top: 10px;
+    color: #b3b3b3; 
 }
 
-
-
-
-
-/* SECÇÃO 4: Grid C (grid-template-areas) */
 #andre_grid_dashboard {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -252,35 +215,31 @@ main {
     gap: 20px;
     margin-top: 25px;
 }
-
-#andre_grid_dashboard > h3, 
-#andre_grid_dashboard > p { 
+#andre_grid_dashboard > h3, #andre_grid_dashboard > p { 
     grid-column: 1 / -1; 
-} /* Faz título e parágrafos ocuparem topo todo */
+}
 
 .andre_area_letra { 
     grid-area: letra; 
-    background-color: var(--bg-card); 
+    background-color: #242424; 
     padding: 25px; 
     border-radius: 6px; 
 }
 
 .andre_area_info { 
     grid-area: informacao; 
-    background-color: var(--bg-card); 
-    padding: 25px; 
-    border-radius: 6px; 
+    background-color: #242424; 
+    padding: 25px; border-radius: 6px; 
 }
 
-.andre_area_info ul { list-style-position: inside; margin-top: 15px; color: var(--texto-secundario); }
-
-
-
-
+.andre_area_info ul { 
+    list-style-position: inside; 
+    margin-top: 15px; 
+    color: #b3b3b3; 
+}
 
 /* 6. TABELA E COMPONENTES (Secções 5 a 10) */
 
-/* Tabela */
 .andre_tabela_container { 
     overflow-x: auto;
     margin-top: 25px; 
@@ -289,47 +248,44 @@ main {
 table { 
     width: 100%; 
     border-collapse: collapse; 
-    background-color: var(--bg-card); 
+    background-color: #242424; 
     border-radius: 6px; 
     overflow: hidden; 
     text-align: left; 
 }
+
 th { 
     padding: 15px; 
-    color: var(--texto-principal);
-    border-bottom: 2px solid var(--verde-destaque); 
+    color: #ffffff; 
+    border-bottom: 2px solid #1db954; 
     text-transform: uppercase; 
     font-size: 13px; 
 }
 
 td { 
-    padding: 12px 15px;
+    padding: 12px 15px; 
     border-bottom: 1px solid rgba(255,255,255,0.05); 
-    color: var(--texto-secundario); 
+    color: #b3b3b3; 
 }
-
 
 tbody tr:hover { 
     background-color: rgba(255,255,255,0.04); 
 }
 
 tfoot td { 
-    border-top: 2px solid var(--borda-suave);
-    font-weight: bold; color: var(--texto-principal);
+    border-top: 2px solid #333333; 
+    font-weight: bold; color: #ffffff; 
     background-color: #1a1a1a; 
 }
 
 
-
-/* Carrossel e Modal */
 .andre_carrossel_moldura { 
     background-color: #000; 
     border-radius: 8px; 
-    padding: 20px; 
-    text-align: center; 
+    padding: 20px; text-align: center; 
     max-width: 420px; 
     margin: 20px auto; 
-    border: 1px solid var(--borda-suave); 
+    border: 1px solid #333333; 
 }
 
 .andre_carrossel_moldura img { 
@@ -344,13 +300,14 @@ tfoot td {
     justify-content: space-between; 
     margin-top: 15px; 
 }
-
 .andre_caixa_modal { 
-    background-color: var(--bg-card); 
-    padding: 30px; border-radius: 8px; 
-    max-width: 450px; width: 90%; 
+    background-color: #242424; 
+    padding: 30px; 
+    border-radius: 8px; 
+    max-width: 450px; 
+    width: 90%; 
     text-align: center; 
-    border: 1px solid var(--borda-suave); 
+    border: 1px solid #333333; 
 }
 
 .andre_modal_fundo { 
@@ -359,16 +316,15 @@ tfoot td {
     top: 0; left: 0; 
     width: 100vw; 
     height: 100vh; 
-    background-color: rgba(0,0,0,0.85);
+    background-color: rgba(0,0,0,0.85); 
     z-index: 9999; 
-    justify-content: 
-    center; align-items: center; 
+    justify-content: center; 
+    align-items: center; 
 }
 
-
-/* Fila de Reprodução */
 .andre_campo_fila_container { 
-    display: flex; gap: 10px; 
+    display: flex; 
+    gap: 10px; 
     margin-bottom: 20px; 
 }
 
@@ -382,18 +338,18 @@ tfoot td {
 
 .andre_btn_filtro { 
     background: transparent; 
-    color: var(--texto-secundario); 
-    border: 1px solid var(--borda-suave); 
+    color: #b3b3b3; 
+    border: 1px solid #333333; 
     padding: 6px 15px; 
     border-radius: 20px; 
-    cursor: pointer; transition: 0.2s; 
+    cursor: pointer; 
+    transition: 0.2s; 
 }
 
-.andre_btn_filtro.ativo, 
-.andre_btn_filtro:hover { 
-    background: var(--verde-destaque); 
+.andre_btn_filtro.ativo, .andre_btn_filtro:hover { 
+    background: #1db954; 
     color: #000; 
-    border-color: var(--verde-destaque); 
+    border-color: #1db954; 
 }
 
 .andre_lista_fila { 
@@ -407,7 +363,7 @@ tfoot td {
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
-    background-color: var(--bg-card); 
+    background-color: #242424; 
     padding: 15px; 
     border-radius: 6px; 
 }
@@ -417,50 +373,48 @@ tfoot td {
     text-decoration: line-through; 
 }
 
-.andre_acoes_item { display: flex; 
+.andre_acoes_item { 
+    display: flex; 
     gap: 10px; 
 }
 
 .andre_btn_acao { 
     background: transparent; 
     color: #fff; 
-    border: 1px solid var(--borda-suave); 
+    border: 1px solid #333333; 
     padding: 6px 12px; 
     border-radius: 4px; 
     cursor: pointer; 
 }
-
 .andre_btn_acao:hover { 
-    background: var(--verde-destaque); 
+    background: #1db954; 
     color: #000; 
-    border-color: var(--verde-destaque); 
+    border-color: #1db954; 
 }
 
-
-/* Géneros */
 .andre_grid_generos { 
     display: grid; 
     grid-template-columns: repeat(3, 1fr); 
-    gap: 20px; margin-top: 25px; 
+    gap: 20px; 
+    margin-top: 25px; 
 }
 
-.andre_card_genero { 
-    background-color: var(--bg-card); 
+.andre_card_genero {
+    background-color: #242424; 
     padding: 24px; 
     border-radius: 6px; 
-    border-left: 4px solid var(--verde-destaque); 
+    border-left: 4px solid #1db954; 
 }
 
 .andre_card_genero h3 { 
-    font-size: 18px;
+    font-size: 18px; 
     margin-bottom: 10px; 
 }
 
-
-/* Formulário e Botões */
 fieldset { 
-    border: 1px solid var(--borda-suave); 
-    border-radius: 6px; padding: 20px;
+    border: 1px solid #333333; 
+    border-radius: 6px; 
+    padding: 20px; 
     margin-bottom: 20px; 
     background-color: rgba(0,0,0,0.2); 
 }
@@ -468,14 +422,14 @@ fieldset {
 legend { 
     padding: 0 10px; 
     font-weight: bold; 
-    color: var(--verde-destaque); 
+    color: #1db954; 
     font-size: 14px; 
 }
 
 .andre_campo_grupo { 
     display: flex; 
     flex-direction: column; 
-    margin-bottom: 16px;
+    margin-bottom: 16px; 
 }
 
 .andre_campo_grupo label { 
@@ -484,26 +438,23 @@ legend {
     margin-bottom: 6px; 
 }
 
-.andre_input_texto, 
-.andre_select, 
-.andre_textarea { 
+.andre_input_texto, .andre_select, .andre_textarea { 
     width: 100%; 
     background-color: #121212; 
-    border: 1px solid var(--borda-suave); 
-    border-radius: 4px; padding: 12px 14px; 
-    color: var(--texto-principal); 
+    border: 1px solid #333333; 
+    border-radius: 4px; 
+    padding: 12px 14px; 
+    color: #ffffff; 
     font-family: inherit; 
 }
 
-.andre_input_texto:focus, 
-.andre_select:focus, 
-.andre_textarea:focus { 
-    border-color: var(--verde-destaque); 
+.andre_input_texto:focus, .andre_select:focus, .andre_textarea:focus { 
+    border-color: #1db954; 
     outline: none; 
 }
 
 .andre_textarea { 
-    min-height: 90px; 
+    min-height: 90px;
     resize: vertical; 
 }
 
@@ -515,7 +466,7 @@ legend {
 }
 
 .andre_btn { 
-    background-color: var(--verde-destaque); 
+    background-color: #1db954; 
     color: #000; 
     border: none; 
     border-radius: 25px; 
@@ -526,50 +477,49 @@ legend {
 }
 
 .andre_btn:hover { 
-    background-color: var(--verde-hover); 
+    background-color: #1ed760; 
     transform: scale(1.03); 
 }
-
 .andre_btn_perigo { 
     background-color: transparent; 
-    color: var(--texto-secundario); 
-    border: 1px solid var(--borda-suave); 
+    color: #b3b3b3; 
+    border: 1px solid #333333; 
 }
 
-.andre_btn_perigo:hover { 
+.andre_btn_perigo:hover {
     background-color: rgba(255,255,255,0.05); 
     color: #fff; 
 }
 
-/* Rodapé */
 footer { 
     grid-area: rodape; 
     background-color: #000000; 
-    padding: 30px; text-align: center; 
-    border-top: 1px solid var(--borda-suave); 
-    color: var(--texto-secundario); 
+    padding: 30px; 
+    text-align: center; 
+    border-top: 1px solid #333333; 
+    color: #b3b3b3; 
     font-size: 13px; 
 }
 
-/* Responsividade (Ecrãs Menores) */
+/* 7. RESPONSIVIDADE */
 @media (max-width: 992px) {
     #andre_wrap { 
         grid-template-columns: 1fr; 
-        grid-template-areas: "cabecalho" "navegacao" "principal" "rodape";
+        grid-template-areas: "cabecalho" "navegacao" "principal" "rodape"; 
     }
 
-    #andre_menu_principal { 
-        position: static; 
-        height: auto; border-right: none; 
-        border-bottom: 1px solid var(--borda-suave); 
-    }
+    #andre_menu_principal {
+         position: static; 
+         height: auto; 
+         border-right: none; 
+         border-bottom: 1px solid #333333; 
+        }
 
     #andre_menu_principal ul { 
         flex-direction: row; 
         flex-wrap: wrap; 
     }
-    #andre_grid_albuns, 
-    .andre_grid_generos { 
+    #andre_grid_albuns, .andre_grid_generos { 
         grid-template-columns: 1fr; 
     }
 
