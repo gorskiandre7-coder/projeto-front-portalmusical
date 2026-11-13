@@ -1,6 +1,5 @@
-/* 1. CARROSSEL DE DISCOS (Seção 6) */
+/* 1. CARROSSEL DE DISCOS (Seção 6 - André) */
 
-// Duas listas simples separadas: uma para fotos, outra para legendas
 let fotos = [
     "img/blond - album.jpg",
     "img/asap - album.jpg",
@@ -27,7 +26,7 @@ function atualizarCarrossel() {
 document.getElementById("andre_btn_prox").onclick = function () {
     posicao = posicao + 1;
     if (posicao >= fotos.length) {
-        posicao = 0; // Volta para o começo
+        posicao = 0;
     }
     atualizarCarrossel();
 };
@@ -36,7 +35,7 @@ document.getElementById("andre_btn_prox").onclick = function () {
 document.getElementById("andre_btn_ant").onclick = function () {
     posicao = posicao - 1;
     if (posicao < 0) {
-        posicao = fotos.length - 1; // Vai para o último
+        posicao = fotos.length - 1;
     }
     atualizarCarrossel();
 };
@@ -61,8 +60,7 @@ document.getElementById("andre_btn_add_carrossel").onclick = function () {
 
 
 
-
-/* 2. FILA DE REPRODUÇÃO (Seção 7) */
+/* 2. FILA DE REPRODUÇÃO (Seção 7 - André) */
 
 let lista = document.getElementById("andre_lista_fila");
 
@@ -71,8 +69,6 @@ function contarMusicas() {
     document.getElementById("andre_contador_fila").innerText = "Total: " + itens.length + " faixas";
 }
 
-
-// Função que ativa os botões de cada música da lista
 function ativarBotoesDaFila() {
     let itens = lista.getElementsByTagName("li");
 
@@ -112,7 +108,6 @@ function ativarBotoesDaFila() {
     }
 }
 
-// Ativa os botões das 3 músicas que já vêm no HTML
 ativarBotoesDaFila();
 
 // Adicionar nova música
@@ -168,27 +163,26 @@ document.getElementById("andre_filtro_ouvidas").onclick = function () { filtrar(
 
 
 
+/* 3. JANELA MODAL DA DEMO (Seção 8 - Bernardo) */
 
-/* 3. JANELA MODAL DA DEMO (Seção 8) */
+let modal = document.getElementById("bernardo_modal_container");
 
-let modal = document.getElementById("andre_modal_container");
-
-document.getElementById("andre_btn_abrir_modal").onclick = function () {
-    let titulo = document.getElementById("andre_demo_titulo").value;
-    let artista = document.getElementById("andre_demo_artista").value;
-    let desc = document.getElementById("andre_demo_descricao").value;
-    let arquivo = document.getElementById("andre_demo_arquivo").files[0];
+document.getElementById("bernardo_btn_abrir_modal").onclick = function () {
+    let titulo = document.getElementById("bernardo_demo_titulo").value;
+    let artista = document.getElementById("bernardo_demo_artista").value;
+    let desc = document.getElementById("bernardo_demo_descricao").value;
+    let arquivo = document.getElementById("bernardo_demo_arquivo").files[0];
 
     if (titulo === "" || artista === "") {
         alert("Preencha o título e o artista!");
         return;
     }
 
-    document.getElementById("andre_modal_titulo_exibicao").innerText = titulo;
-    document.getElementById("andre_modal_artista_exibicao").innerText = artista;
-    document.getElementById("andre_modal_desc_exibicao").innerText = desc;
+    document.getElementById("bernardo_modal_titulo_exibicao").innerText = titulo;
+    document.getElementById("bernardo_modal_artista_exibicao").innerText = artista;
+    document.getElementById("bernardo_modal_desc_exibicao").innerText = desc;
 
-    let imgPreview = document.getElementById("andre_modal_img_exibicao");
+    let imgPreview = document.getElementById("bernardo_modal_img_exibicao");
     if (arquivo) {
         imgPreview.src = URL.createObjectURL(arquivo);
         imgPreview.style.display = "block";
@@ -199,23 +193,25 @@ document.getElementById("andre_btn_abrir_modal").onclick = function () {
     modal.style.display = "flex";
 };
 
-document.getElementById("andre_btn_fechar_modal").onclick = function () {
+document.getElementById("bernardo_btn_fechar_modal").onclick = function () {
     modal.style.display = "none";
 };
 
 
-/* 4. VALIDAÇÃO DO FORMULÁRIO VIP (Seção 10) */
 
-document.getElementById("andre_form_cadastro").onsubmit = function (evento) {
-    evento.preventDefault(); // Não deixa a página recarregar
 
-    let nome = document.getElementById("andre_nome").value;
-    let email = document.getElementById("andre_email").value;
-    let senha = document.getElementById("andre_senha").value;
-    let confirma = document.getElementById("andre_confirma_senha").value;
-    let idade = document.getElementById("andre_idade").value;
-    let genero = document.getElementById("andre_genero_fav").value;
-    let termos = document.getElementById("andre_termos").checked;
+/* 4. VALIDAÇÃO DO FORMULÁRIO VIP (Seção 10 - Bernardo) */
+
+document.getElementById("bernardo_form_cadastro").onsubmit = function (evento) {
+    evento.preventDefault();
+
+    let nome = document.getElementById("bernardo_nome").value;
+    let email = document.getElementById("bernardo_email").value;
+    let senha = document.getElementById("bernardo_senha").value;
+    let confirma = document.getElementById("bernardo_confirma_senha").value;
+    let idade = document.getElementById("bernardo_idade").value;
+    let genero = document.getElementById("bernardo_genero_fav").value;
+    let termos = document.getElementById("bernardo_termos").checked;
 
     if (nome.length < 3) {
         alert("Digite um nome com pelo menos 3 letras.");
@@ -243,5 +239,5 @@ document.getElementById("andre_form_cadastro").onsubmit = function (evento) {
     }
 
     alert("Cadastro concluído com sucesso! Bem-vindo, " + nome + "!");
-    document.getElementById("andre_form_cadastro").reset();
+    document.getElementById("bernardo_form_cadastro").reset();
 };
